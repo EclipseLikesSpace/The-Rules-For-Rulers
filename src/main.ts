@@ -3,8 +3,10 @@
 // Path: src\main.ts
 
 function toggle_theme(){
-    document.body.classList.toggle("dark");
+    const darkModeBtn: any = document.getElementById('dark-mode');
     const darkMode: any = localStorage.getItem('darkMode');
+    document.body.classList.toggle("dark");
+    darkModeBtn.classList.toggle("dark");
     if (darkMode == 'true'){
         localStorage.setItem('darkMode', 'false');
     }else{
