@@ -4,7 +4,6 @@
     font-family: 'IBM Plex Sans Thai Looped', sans-serif;
     font-size: large;
     transition-duration: .5s;
-    cursor: url("cursor.cur"), auto;
 }
 
 button {
@@ -19,6 +18,10 @@ button {
 
 button:hover {
     background-color: #d3d3d3;
+}
+
+body {
+    cursor: url("cursor.cur"), auto;
 }
 
 .dark {
