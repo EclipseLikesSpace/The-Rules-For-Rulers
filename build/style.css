@@ -14,14 +14,11 @@ button {
     color: #202020;
     size: 150px;
     transition-duration: 500ms;
+    cursor: url("../images/cursor.cur"), default;
 }
 
 button:hover {
     background-color: #d3d3d3;
-}
-
-body {
-    cursor: url('../images/cursor.png'), url('../images/cursor.cur'), auto;
 }
 
 .dark {
