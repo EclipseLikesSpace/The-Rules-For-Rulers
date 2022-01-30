@@ -1,4 +1,4 @@
-// github copilot shenanigans
+// github copilot shenanigans!!
 // Language: typescript
 // Path: src\main.ts
 
