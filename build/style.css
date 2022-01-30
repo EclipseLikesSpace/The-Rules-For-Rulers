@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped:wght@200&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 * {
     font-family: 'IBM Plex Sans Thai Looped', sans-serif;

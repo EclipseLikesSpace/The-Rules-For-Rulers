@@ -10,5 +10,8 @@
     "game"
   ],
   "author": "Just-a-Unity-Dev",
-  "license": "SEE LICENSE IN LICENSE"
+  "license": "SEE LICENSE IN LICENSE",
+  "devDependencies": {
+    "tailwindcss": "^3.0.18"
+  }
 }
