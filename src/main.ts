@@ -7,5 +7,5 @@ console.log(message)
 
 function toggle_theme(){
     var element: any = document.body;
-    element.classList.toggle("dark-mode");
+    element.classList.toggle("dark");
 }
