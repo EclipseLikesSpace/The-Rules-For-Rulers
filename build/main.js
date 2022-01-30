@@ -3,8 +3,10 @@
 // Language: typescript
 // Path: src\main.ts
 function toggle_theme() {
-    document.body.classList.toggle("dark");
+    var darkModeBtn = document.getElementById('dark-mode');
     var darkMode = localStorage.getItem('darkMode');
+    document.body.classList.toggle("dark");
+    darkModeBtn.classList.toggle("dark");
     if (darkMode == 'true') {
         localStorage.setItem('darkMode', 'false');
     }
