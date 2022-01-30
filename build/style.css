@@ -38,6 +38,11 @@ h3 {
     left: 1px; bottom: 1px;
 }
 
+#lowerright {
+    position: absolute;
+    right: 1px; bottom: 1px;
+}
+
 footer {
     background-color: #aaaaaa;
 }
