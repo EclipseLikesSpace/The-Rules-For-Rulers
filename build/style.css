@@ -6,6 +6,10 @@
     transition-duration: .5s;
 }
 
+a {
+    cursor: url("../images/cursor.png"), default;
+}
+
 button {
     outline: none;
     border: 2px solid #404040;
