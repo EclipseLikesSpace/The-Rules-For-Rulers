@@ -47,3 +47,7 @@ button:hover {
     color: #f5f5f5;
     transition-duration: 500ms;
 }
+
+.center {
+    text-align: center;
+}
