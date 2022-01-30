@@ -6,6 +6,20 @@
     transition-duration: 500ms;
 }
 
+h1 {
+    font-size: xx-large;
+    text-decoration: underline;
+    text-decoration-color: #7a7a7a;
+}
+
+h2 {
+    font-size: x-large;
+}
+
+h3 {
+    font-size: 21px;
+}
+
 button {
     outline: none;
     border: 2px solid #404040;
