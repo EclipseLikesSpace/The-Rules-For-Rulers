@@ -20,10 +20,26 @@ h3 {
     font-size: 21px;
 }
 
+.center-image{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
 .banner {
     text-decoration: underline;
     text-decoration-color: #7a7a7a;
     text-align: center;
+}
+
+#lowerleft {
+    position: absolute;
+    left: 1px; bottom: 1px;
+}
+
+footer {
+    background-color: #aaaaaa;
 }
 
 button {
@@ -34,6 +50,8 @@ button {
     color: #202020;
     size: 150px;
     transition-duration: 500ms;
+    width: 4rem;
+    height: 4rem;
 }
 
 center {

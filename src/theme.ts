@@ -5,11 +5,19 @@
 function toggle_theme(){
     const darkModeBtn: any = document.getElementById('dark-mode');
     const darkMode: any = localStorage.getItem('darkMode');
+
+    const moon: any = document.getElementById("moon");
+    const sun: any = document.getElementById("sun");
+
     document.body.classList.toggle("dark");
     darkModeBtn.classList.toggle("dark");
     if (darkMode == 'true'){
+        moon.style.display = "block";
+        sun.style.display = "none";
         localStorage.setItem('darkMode', 'false');
     }else{
+        moon.style.display = "none";
+        sun.style.display = "block";
         localStorage.setItem('darkMode', 'true');
     }
 }
@@ -17,7 +25,6 @@ function toggle_theme(){
 function set_theme(){
     const darkMode: any = localStorage.getItem('darkMode');
     const darkModeBtn: any = document.getElementById('dark-mode');
-    localStorage.setItem('darkMode', 'false');
     switch (darkMode){
         case "true":
             console.log("User prefers dark mode")
