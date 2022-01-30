@@ -2,12 +2,12 @@
 
 * {
     font-family: 'IBM Plex Sans Thai Looped', sans-serif;
-    font-size: large;
+    font-size: medium;
     transition-duration: 500ms;
 }
 
 h1 {
-    font-size: xx-large;
+    font-size: 48px;
     text-decoration: underline;
     text-decoration-color: #7a7a7a;
 }
@@ -18,6 +18,12 @@ h2 {
 
 h3 {
     font-size: 21px;
+}
+
+.banner {
+    text-decoration: underline;
+    text-decoration-color: #7a7a7a;
+    text-align: center;
 }
 
 button {
