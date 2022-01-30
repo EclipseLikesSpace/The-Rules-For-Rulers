@@ -2,7 +2,7 @@
 // Language: typescript
 // Path: src\main.ts
 
-type KeyType = {
+type keyType = {
     /**
      * Name of the key (this will be for cosmetic purposes only, not the actual rank)
      */
@@ -18,9 +18,9 @@ type KeyType = {
 };
 
 class Key {
-    keyType: KeyType
+    keyType: keyType
 
-    constructor(keyType: KeyType) {
+    constructor(keyType: keyType) {
         this.keyType = keyType
     }
 }
