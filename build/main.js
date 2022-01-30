@@ -5,6 +5,5 @@
 var message = "Hello, world!";
 console.log(message);
 function toggle_theme() {
-    var element = document.body;
-    element.classList.toggle("dark-mode");
+    document.body.classList.toggle("dark");
 }

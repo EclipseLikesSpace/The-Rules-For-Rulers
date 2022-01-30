@@ -6,6 +6,9 @@ let message: string = "Hello, world!"
 console.log(message)
 
 function toggle_theme(){
-    var element: any = document.body;
-    element.classList.toggle("dark");
+    document.body.classList.toggle("dark");
+}
+
+function set_theme(){
+    const cat: String = localStorage.getItem('myCat');
 }
