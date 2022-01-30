@@ -20,7 +20,10 @@ function set_theme(){
             document.body.classList.toggle("dark");
         case "false":
             console.log("User prefers light mode");
-        case undefined:
+        case null:
+            console.log("Doesn't exist, initalizing")
             localStorage.setItem('darkMode', 'false');
     }
 }
+
+set_theme();
