@@ -2,13 +2,25 @@
 // Language: typescript
 // Path: src\main.ts
 
-let message: string = "Hello, world!"
-console.log(message)
-
 function toggle_theme(){
     document.body.classList.toggle("dark");
+    var darkMode: any = localStorage.getItem('darkMode');
+    switch (darkMode){
+        case "true":
+            localStorage.setItem('darkMode', 'false');
+        case "false":
+            localStorage.setItem('darkMode', 'true');
+    }
 }
 
 function set_theme(){
-    const cat: String = localStorage.getItem('myCat');
+    var darkMode: any = localStorage.getItem('darkMode');
+    switch (darkMode){
+        case "true":
+            document.body.classList.toggle("dark");
+        case "false":
+            console.log("User prefers light mode");
+        case undefined:
+            localStorage.setItem('darkMode', 'false');
+    }
 }
