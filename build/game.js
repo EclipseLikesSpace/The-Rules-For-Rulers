@@ -6,4 +6,7 @@ class Key {
     constructor(keyType) {
         this.keyType = keyType;
     }
+    setLoyalty(loyalty) {
+        this.keyType.loyalty = loyalty;
+    }
 }
