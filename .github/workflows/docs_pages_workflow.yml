@@ -6,7 +6,6 @@ on:
     branches: [ gh-pages ]
  
 jobs:
- 
   build_docs_job:
     runs-on: ubuntu-latest
     container: debian:buster-slim
