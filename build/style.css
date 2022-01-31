@@ -35,12 +35,12 @@ h3 {
 }
 
 #lowerleft {
-    position: absolute;
+    position: fixed;
     left: 1px; bottom: 1px;
 }
 
 #lowerright {
-    position: absolute;
+    position: fixed;
     right: 1px; bottom: 1px;
 }
 

@@ -1,0 +1,33 @@
+.key {
+    outline: none;
+    border: 2px solid #404040;
+    background-color: transparent;
+    border-radius: 5px;
+    width: 500px;
+    margin: auto;
+    transition-duration: 500ms;
+}
+
+.key img {
+    float: left;
+    width: 100px;
+    height: 100px;
+    background: transparent;
+}
+
+.key h3 {
+    position: relative;
+    top: -20px;
+    left: 0px;
+}
+.key h4 {
+    position: relative;
+    top: -50px;
+    left: 20px;
+    color: #707070;
+}
+.key p {
+    position: relative;
+    top: -50px;
+    left: 100px;
+}
