@@ -1,11 +1,12 @@
 name: docs_pages_workflow
  
-# execute this workflow automatically when a we push to master
+# execute this workflow automatically when a we push to gh-pages
 on:
   push:
     branches: [ gh-pages ]
  
 jobs:
+ 
   build_docs_job:
     runs-on: ubuntu-latest
     container: debian:buster-slim
