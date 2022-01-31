@@ -18,9 +18,13 @@ type keyType = {
 };
 
 class Key {
-    keyType: keyType
+    public keyType: keyType
 
     constructor(keyType: keyType) {
         this.keyType = keyType
+    }
+
+    setLoyalty(loyalty: number){
+        this.keyType.loyalty = loyalty
     }
 }
