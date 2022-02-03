@@ -58,6 +58,10 @@
         cursor: url("../images/cursor.cur"),url("../images/cursor.png"),default
     }
 
+    body {
+        background-color: #aaa;
+    }
+
     #github {
         position: fixed;
         bottom: 0;
