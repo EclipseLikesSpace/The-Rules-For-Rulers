@@ -29,7 +29,7 @@
     <p id="lowerright"><a href="https://github.com/EclipseLikesSpace/The-Rules-For-Rulers" style="color: green;">Github</a></p>
 </body>
 
-<style src="style.css">
+<style lang="scss">
     @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped:wght@200&display=swap');
 
     * {

@@ -15,7 +15,7 @@
     <p id="loyalty" class="lleft">Loyalty: <strong>{loyalty}</strong></p>
 </span>
 
-<style>
+<style lang="scss">
     .key {
         display: inline-block;
         padding: 0px;
