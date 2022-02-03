@@ -18,6 +18,7 @@
 <style>
     .key {
         display: inline-block;
+        padding: 0px;
         outline: none;
         border: 2px solid #404040;
         background-color: transparent;
