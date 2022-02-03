@@ -16,7 +16,6 @@
         country, not enforce the laws. The enforcer does that, not the army."
         loyalty=100
     />
-
     <Key
         id="scientist_rstar"
         name="RStar"
@@ -26,7 +25,7 @@
         you, your general and your army."
         loyalty=100
     />
-    <p id="lowerright"><a href="https://github.com/EclipseLikesSpace/The-Rules-For-Rulers" style="color: green;">Github</a></p>
+    <p ><a id="github" href="https://github.com/EclipseLikesSpace/The-Rules-For-Rulers">Fork it on Github!</a></p>
 </body>
 
 <style lang="scss">
@@ -37,6 +36,14 @@
         font-size: medium;
         transition-duration: 500ms;
         cursor: url("../images/cursor.cur"),url("../images/cursor.png"),default
+    }
+
+    #github {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        font-size: x-large;
+        color: green;
     }
 
     h1 {
