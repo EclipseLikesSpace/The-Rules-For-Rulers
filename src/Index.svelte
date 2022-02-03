@@ -12,10 +12,11 @@
         <Key
             id="general_ofsho"
             name="Ofsho"
-            rank="General"
+            rank="Sultan"
             path="./images/general.png"
             description="The general's purpose is to defend and protect the
-            country, not enforce the laws. The enforcer does that, not the army."
+            country, not enforce the laws. The enforcer does that, not the army.
+            And he is the sultan"
             loyalty=100
         />
         <Key
