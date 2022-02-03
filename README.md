@@ -34,5 +34,3 @@ If you want to automate installing the dependencies and building the source, run
 ```bash
 npm run deploy
 ```
-
-This will build the typescript source, then you can just open up the `index.html` and *voila!*
