@@ -11,8 +11,8 @@
     <img src={path} alt="key_image">
     <h3>{rank} {name}</h3>
     <h4><em>{rank}</em></h4>
-    <p>{description}</p>
-    <p id="loyalty">Loyalty: <strong>{loyalty}</strong></p>
+    <p id="description">{description}</p>
+    <p id="loyalty" class="lleft">Loyalty: <strong>{loyalty}</strong></p>
 </div>
 
 <style>
@@ -27,6 +27,18 @@
         transition-duration: 500ms;
     }
 
+    .key:hover {
+        border: 2px solid #00ff00;
+        background-color: #404040;
+        color: #00ff00;
+    }
+
+    .lleft {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+
     .key img {
         float: left;
         width: 100px;
@@ -34,6 +46,7 @@
         top: 7.5rem;
         left: 2rem;
         background: transparent;
+        background-color: #bbb;
         border: 2px solid #404040;
         border-radius: 5px;
     }

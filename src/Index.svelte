@@ -1,25 +1,33 @@
 <script>
-    import Key from './Key.svelte';
+    import Key from './components/Key.svelte';
 </script>
 
-<main>
-    <head>
-        <title>The Rules for Rulers</title>
-        <link rel="shortcut icon" type="image/png" href="../images/rulers4rulers_logo_transparent.png">
-    </head>
-    <body>
-        <Key
-            id="general_test"
-            name="General Ofsho"
-            rank="General"
-            path="./images/general.png"
-            description="The general's purpose is to defend and protect the
-            country, not enforce the laws. The enforcer does that, not the army."
-            loyalty=100
-        />
-        <p id="lowerright"><a href="https://github.com/EclipseLikesSpace/The-Rules-For-Rulers" style="color: green;">Github</a></p>
-    </body>
-</main>
+<head>
+    <title>The Rules for Rulers</title>
+    <link rel="shortcut icon" type="image/png" href="../images/rulers4rulers_logo_transparent.png">
+</head>
+<body>
+    <Key
+        id="general_ofsho"
+        name="Ofsho"
+        rank="General"
+        path="./images/general.png"
+        description="The general's purpose is to defend and protect the
+        country, not enforce the laws. The enforcer does that, not the army."
+        loyalty=100
+    />
+
+    <Key
+        id="scientist_rstar"
+        name="RStar"
+        rank="Scientist"
+        path="./images/scientist.png"
+        description="The scientist is to research technology and weaponry for
+        you, your general and your army."
+        loyalty=100
+    />
+    <p id="lowerright"><a href="https://github.com/EclipseLikesSpace/The-Rules-For-Rulers" style="color: green;">Github</a></p>
+</body>
 
 <style src="style.css">
     @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped:wght@200&display=swap');
@@ -45,7 +53,7 @@
         font-size: 21px;
     }
 
-    .center-image{
+    .center .image{
         display: block;
         margin-left: auto;
         margin-right: auto;
@@ -56,16 +64,6 @@
         text-decoration: underline;
         text-decoration-color: #7a7a7a;
         text-align: center;
-    }
-
-    #lowerleft {
-        position: fixed;
-        left: 1px; bottom: 1px;
-    }
-
-    #lowerright {
-        position: fixed;
-        right: 1px; bottom: 1px;
     }
 
     footer {
