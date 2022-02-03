@@ -3,7 +3,8 @@
 A HTML javascript game based off of the [CGP Grey](https://www.youtube.com/channel/UC2C_jShtL725hvbm1arSV9w) [video](https://youtu.be/rStL7niR7gs) "The Rules For Rulers"
 
 ## Play
-[Play the game here!](https://eclipselikesspace.github.io/The-Rules-For-Rulers/public/)
+[Play the game here!](https://eclipselikesspace.github.io/The-Rules-For-Rulers/)
+)
 
 ## License
 GNU General Public License v3
