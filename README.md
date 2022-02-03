@@ -4,7 +4,8 @@ A HTML javascript game based off of the [CGP Grey](https://www.youtube.com/chann
 
 ## Play
 [Play the game here!](https://eclipselikesspace.github.io/The-Rules-For-Rulers/)
-)
+
+
 
 ## License
 GNU General Public License v3
