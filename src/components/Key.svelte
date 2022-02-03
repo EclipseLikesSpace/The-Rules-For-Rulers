@@ -72,4 +72,13 @@
             right: 7rem;
         }
     }
+    ::-moz-selection {
+        color: rgb(255, 255, 255);
+        background: rgb(0, 0, 0);
+    }
+
+    ::selection {
+        color: rgb(255, 255, 255);
+        background: rgb(0, 0, 0);
+    }
 </style>

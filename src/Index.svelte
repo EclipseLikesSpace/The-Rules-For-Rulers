@@ -7,25 +7,45 @@
     <link rel="shortcut icon" type="image/png" href="../images/rulers4rulers_logo_transparent.png">
 </head>
 <body>
-    <Key
-        id="general_ofsho"
-        name="Ofsho"
-        rank="General"
-        path="./images/general.png"
-        description="The general's purpose is to defend and protect the
-        country, not enforce the laws. The enforcer does that, not the army."
-        loyalty=100
-    />
-    <Key
-        id="scientist_rstar"
-        name="RStar"
-        rank="Scientist"
-        path="./images/scientist.png"
-        description="The scientist is to research technology and weaponry for
-        you, your general and your army."
-        loyalty=100
-    />
-    <p ><a id="github" href="https://github.com/EclipseLikesSpace/The-Rules-For-Rulers">Fork it on Github!</a></p>
+    <span id="key-container" style="border: 2px solid #aaa; display: inline-block; width: 75rem;">
+        <h1 class="center">Keys</h1>
+        <Key
+            id="general_ofsho"
+            name="Ofsho"
+            rank="General"
+            path="./images/general.png"
+            description="The general's purpose is to defend and protect the
+            country, not enforce the laws. The enforcer does that, not the army."
+            loyalty=100
+        />
+        <Key
+            id="scientist_rstar"
+            name="RStar"
+            rank="Scientist"
+            path="./images/scientist.png"
+            description="The scientist is to research technology and weaponry for
+            you, your general and your army."
+            loyalty=100
+        />
+        <Key
+            id="scientist_rstar"
+            name="RStar"
+            rank="Scientist"
+            path="./images/scientist.png"
+            description="The scientist is to research technology and weaponry for
+            you, your general and your army."
+            loyalty=100
+        />
+        <Key
+            id="enforcer_eclipse"
+            name="Codename Eclipse"
+            rank="Enforcer"
+            path="./images/enforcer.png"
+            description="The Enforcer enforces the law. The Enforcer is one of the most important keys in the game. Without the Enforcer, your country will fall into chaos."
+            loyalty=100
+        />
+    </span>
+    <p ><a id="github" href="https://github.com/EclipseLikesSpace/The-Rules-For-Rulers">Contribute on Github!</a></p>
 </body>
 
 <style lang="scss">
