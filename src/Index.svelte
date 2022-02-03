@@ -8,8 +8,15 @@
         <link rel="shortcut icon" type="image/png" href="../images/rulers4rulers_logo_transparent.png">
     </head>
     <body>
-        <em><h2 class="center">"Why don't rulers see as clearly as you?"</h2></em>
-        <Key id="general_test" name="General Ofsho" rank="General" path="./images/general.png"/>
+        <Key
+            id="general_test"
+            name="General Ofsho"
+            rank="General"
+            path="./images/general.png"
+            description="The general's purpose is to defend and protect the
+            country, not enforce the laws. The enforcer does that, not the army."
+            loyalty=100
+        />
         <p id="lowerright"><a href="https://github.com/EclipseLikesSpace/The-Rules-For-Rulers" style="color: green;">Github</a></p>
     </body>
 </main>
@@ -96,12 +103,12 @@
     }
 
     ::-moz-selection {
-    color: rgb(255, 255, 255);
-    background: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
+        background: rgb(0, 0, 0);
     }
 
     ::selection {
-    color: rgb(255, 255, 255);
-    background: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
+        background: rgb(0, 0, 0);
     }
 </style>

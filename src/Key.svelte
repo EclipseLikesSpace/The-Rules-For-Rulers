@@ -3,13 +3,16 @@
     export let name = null;
     export let rank = null;
     export let path = null;
+    export let description = null;
+    export let loyalty = null;
 </script>
 
 <div id={id} max-width="500px" class="key">
     <img src={path} alt="key_image">
     <h3>{rank} {name}</h3>
     <h4><em>{rank}</em></h4>
-    <p>Hello, world!</p>
+    <p>{description}</p>
+    <p id="loyalty">Loyalty: <strong>{loyalty}</strong></p>
 </div>
 
 <style>
@@ -18,7 +21,8 @@
         border: 2px solid #404040;
         background-color: transparent;
         border-radius: 5px;
-        width: 500px;
+        width: 31.5rem;
+        height: 15rem;
         margin: auto;
         transition-duration: 500ms;
     }
@@ -27,6 +31,8 @@
         float: left;
         width: 100px;
         height: 100px;
+        top: 7.5rem;
+        left: 2rem;
         background: transparent;
         border: 2px solid #404040;
         border-radius: 5px;
@@ -45,7 +51,15 @@
     }
     .key p {
         position: relative;
-        top: -80px;
+        /*top: -80px;
+        left: 120px;*/
+        margin-top: -80px;
+        margin-left: 120px;
+    }
+
+    .key #loyalty {
+        position: relative;
+        top: -100px;
         left: 120px;
     }
 </style>
