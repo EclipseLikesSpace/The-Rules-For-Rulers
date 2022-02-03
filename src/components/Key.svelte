@@ -7,16 +7,17 @@
     export let loyalty = null;
 </script>
 
-<div id={id} max-width="500px" class="key">
+<span id={id} max-width="500px" class="key">
     <img src={path} alt="key_image">
     <h3>{rank} {name}</h3>
     <h4><em>{rank}</em></h4>
     <p id="description">{description}</p>
     <p id="loyalty" class="lleft">Loyalty: <strong>{loyalty}</strong></p>
-</div>
+</span>
 
 <style>
     .key {
+        display: inline-block;
         outline: none;
         border: 2px solid #404040;
         background-color: transparent;
