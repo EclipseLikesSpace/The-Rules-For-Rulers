@@ -2,7 +2,6 @@
 
 name: deploy-gh-pages
 
-
 on:
   push:
     branches: [ master ]
@@ -21,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Deploy to GitHub Pages
-      - uses: JamesIves/github-pages-deploy-action@4.1.5
+        uses: JamesIves/github-pages-deploy-action@4.1.5
         with:
           branch: gh-pages
           folder: public
