@@ -4,8 +4,8 @@
 
 <svelte:head>
     <title>The Rules for Rulers</title>
-    <link rel="shortcut icon" type="image/png" href="../images/rulers4rulers_logo_transparent.png">
 </svelte:head>
+
 <body>
     <span id="key-container" style="border: 2px solid #aaa; display: inline-block; width: 75rem;">
         <h1 class="center">Keys</h1>

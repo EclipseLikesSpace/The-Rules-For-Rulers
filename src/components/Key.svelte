@@ -1,13 +1,20 @@
 <script>
     import KeyClass from './key_class.js';
-    export let keyData = new Key();
+    export let keyData = new KeyClass();
+    export let id = null;
+    export let name = null;
+    export let rank = null;
+    export let path = null;
+    export let description = null;
+    export let loyalty = null;
+    keyData.loyalty = loyalty;
 </script>
 
-<span id={keyData.id} max-width="500px" class="key">
-    <img src={keyData.path} alt="key_image">
-    <h3>{keyData.rank} {keyData.name}</h3>
-    <h4><em>{keyData.rank}</em></h4>
-    <p id="description">{keyData.description}</p>
+<span id={id} max-width="500px" class="key">
+    <img src={path} alt="key_image">
+    <h3>{rank} {name}</h3>
+    <h4><em>{rank}</em></h4>
+    <p id="description">{description}</p>
     <p class="loyalty">Loyalty: <strong>{keyData.loyalty}</strong>%</p>
 </span>
 

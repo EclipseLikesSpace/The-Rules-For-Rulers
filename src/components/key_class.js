@@ -15,7 +15,7 @@ export default class KeyClass {
         if (loyalty > 0) { loyalty = 0; defected=true; enabled=false }
         if (this.defected) {
             const element = document.getElementById(this.element_id)
-            element.style.backgroundColor = rgb(75,75,75);
+            element.style.backgroundColor = rgb(25,25,25);
         }
     }
 };

@@ -388,7 +388,7 @@ var app = (function () {
             if (loyalty > 0) { loyalty = 0; defected=true; enabled=false; }
             if (this.defected) {
                 const element = document.getElementById(this.element_id);
-                element.style.backgroundColor = rgb(75,75,75);
+                element.style.backgroundColor = rgb(25,25,25);
             }
         }
     }
@@ -402,19 +402,15 @@ var app = (function () {
     	let img_src_value;
     	let t0;
     	let h3;
-    	let t1_value = /*keyData*/ ctx[0].rank + "";
     	let t1;
     	let t2;
-    	let t3_value = /*keyData*/ ctx[0].name + "";
     	let t3;
     	let t4;
     	let h4;
     	let em;
-    	let t5_value = /*keyData*/ ctx[0].rank + "";
     	let t5;
     	let t6;
     	let p0;
-    	let t7_value = /*keyData*/ ctx[0].description + "";
     	let t7;
     	let t8;
     	let p1;
@@ -423,7 +419,6 @@ var app = (function () {
     	let t10_value = /*keyData*/ ctx[0].loyalty + "";
     	let t10;
     	let t11;
-    	let span_id_value;
 
     	const block = {
     		c: function create() {
@@ -431,43 +426,43 @@ var app = (function () {
     			img = element("img");
     			t0 = space();
     			h3 = element("h3");
-    			t1 = text(t1_value);
+    			t1 = text(/*rank*/ ctx[3]);
     			t2 = space();
-    			t3 = text(t3_value);
+    			t3 = text(/*name*/ ctx[2]);
     			t4 = space();
     			h4 = element("h4");
     			em = element("em");
-    			t5 = text(t5_value);
+    			t5 = text(/*rank*/ ctx[3]);
     			t6 = space();
     			p0 = element("p");
-    			t7 = text(t7_value);
+    			t7 = text(/*description*/ ctx[5]);
     			t8 = space();
     			p1 = element("p");
     			t9 = text("Loyalty: ");
     			strong = element("strong");
     			t10 = text(t10_value);
     			t11 = text("%");
-    			if (!src_url_equal(img.src, img_src_value = /*keyData*/ ctx[0].path)) attr_dev(img, "src", img_src_value);
+    			if (!src_url_equal(img.src, img_src_value = /*path*/ ctx[4])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "key_image");
     			attr_dev(img, "class", "svelte-6xjm9s");
-    			add_location(img, file$1, 6, 4, 162);
+    			add_location(img, file$1, 13, 4, 373);
     			attr_dev(h3, "class", "svelte-6xjm9s");
-    			add_location(h3, file$1, 7, 4, 208);
+    			add_location(h3, file$1, 14, 4, 411);
     			attr_dev(em, "class", "svelte-6xjm9s");
-    			add_location(em, file$1, 8, 8, 256);
+    			add_location(em, file$1, 15, 8, 443);
     			attr_dev(h4, "class", "svelte-6xjm9s");
-    			add_location(h4, file$1, 8, 4, 252);
+    			add_location(h4, file$1, 15, 4, 439);
     			attr_dev(p0, "id", "description");
     			attr_dev(p0, "class", "svelte-6xjm9s");
-    			add_location(p0, file$1, 9, 4, 290);
+    			add_location(p0, file$1, 16, 4, 469);
     			attr_dev(strong, "class", "svelte-6xjm9s");
-    			add_location(strong, file$1, 10, 32, 369);
+    			add_location(strong, file$1, 17, 32, 540);
     			attr_dev(p1, "class", "loyalty svelte-6xjm9s");
-    			add_location(p1, file$1, 10, 4, 341);
-    			attr_dev(span, "id", span_id_value = /*keyData*/ ctx[0].id);
+    			add_location(p1, file$1, 17, 4, 512);
+    			attr_dev(span, "id", /*id*/ ctx[1]);
     			attr_dev(span, "max-width", "500px");
     			attr_dev(span, "class", "key svelte-6xjm9s");
-    			add_location(span, file$1, 5, 0, 104);
+    			add_location(span, file$1, 12, 0, 323);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -495,18 +490,18 @@ var app = (function () {
     			append_dev(p1, t11);
     		},
     		p: function update(ctx, [dirty]) {
-    			if (dirty & /*keyData*/ 1 && !src_url_equal(img.src, img_src_value = /*keyData*/ ctx[0].path)) {
+    			if (dirty & /*path*/ 16 && !src_url_equal(img.src, img_src_value = /*path*/ ctx[4])) {
     				attr_dev(img, "src", img_src_value);
     			}
 
-    			if (dirty & /*keyData*/ 1 && t1_value !== (t1_value = /*keyData*/ ctx[0].rank + "")) set_data_dev(t1, t1_value);
-    			if (dirty & /*keyData*/ 1 && t3_value !== (t3_value = /*keyData*/ ctx[0].name + "")) set_data_dev(t3, t3_value);
-    			if (dirty & /*keyData*/ 1 && t5_value !== (t5_value = /*keyData*/ ctx[0].rank + "")) set_data_dev(t5, t5_value);
-    			if (dirty & /*keyData*/ 1 && t7_value !== (t7_value = /*keyData*/ ctx[0].description + "")) set_data_dev(t7, t7_value);
+    			if (dirty & /*rank*/ 8) set_data_dev(t1, /*rank*/ ctx[3]);
+    			if (dirty & /*name*/ 4) set_data_dev(t3, /*name*/ ctx[2]);
+    			if (dirty & /*rank*/ 8) set_data_dev(t5, /*rank*/ ctx[3]);
+    			if (dirty & /*description*/ 32) set_data_dev(t7, /*description*/ ctx[5]);
     			if (dirty & /*keyData*/ 1 && t10_value !== (t10_value = /*keyData*/ ctx[0].loyalty + "")) set_data_dev(t10, t10_value);
 
-    			if (dirty & /*keyData*/ 1 && span_id_value !== (span_id_value = /*keyData*/ ctx[0].id)) {
-    				attr_dev(span, "id", span_id_value);
+    			if (dirty & /*id*/ 2) {
+    				attr_dev(span, "id", /*id*/ ctx[1]);
     			}
     		},
     		i: noop,
@@ -530,8 +525,15 @@ var app = (function () {
     function instance$1($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Key', slots, []);
-    	let { keyData = new Key() } = $$props;
-    	const writable_props = ['keyData'];
+    	let { keyData = new KeyClass() } = $$props;
+    	let { id = null } = $$props;
+    	let { name = null } = $$props;
+    	let { rank = null } = $$props;
+    	let { path = null } = $$props;
+    	let { description = null } = $$props;
+    	let { loyalty = null } = $$props;
+    	keyData.loyalty = loyalty;
+    	const writable_props = ['keyData', 'id', 'name', 'rank', 'path', 'description', 'loyalty'];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Key> was created with unknown prop '${key}'`);
@@ -539,29 +541,59 @@ var app = (function () {
 
     	$$self.$$set = $$props => {
     		if ('keyData' in $$props) $$invalidate(0, keyData = $$props.keyData);
+    		if ('id' in $$props) $$invalidate(1, id = $$props.id);
+    		if ('name' in $$props) $$invalidate(2, name = $$props.name);
+    		if ('rank' in $$props) $$invalidate(3, rank = $$props.rank);
+    		if ('path' in $$props) $$invalidate(4, path = $$props.path);
+    		if ('description' in $$props) $$invalidate(5, description = $$props.description);
+    		if ('loyalty' in $$props) $$invalidate(6, loyalty = $$props.loyalty);
     	};
 
-    	$$self.$capture_state = () => ({ KeyClass, keyData });
+    	$$self.$capture_state = () => ({
+    		KeyClass,
+    		keyData,
+    		id,
+    		name,
+    		rank,
+    		path,
+    		description,
+    		loyalty
+    	});
 
     	$$self.$inject_state = $$props => {
     		if ('keyData' in $$props) $$invalidate(0, keyData = $$props.keyData);
+    		if ('id' in $$props) $$invalidate(1, id = $$props.id);
+    		if ('name' in $$props) $$invalidate(2, name = $$props.name);
+    		if ('rank' in $$props) $$invalidate(3, rank = $$props.rank);
+    		if ('path' in $$props) $$invalidate(4, path = $$props.path);
+    		if ('description' in $$props) $$invalidate(5, description = $$props.description);
+    		if ('loyalty' in $$props) $$invalidate(6, loyalty = $$props.loyalty);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [keyData];
+    	return [keyData, id, name, rank, path, description, loyalty];
     }
 
-    class Key_1 extends SvelteComponentDev {
+    class Key extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$1, create_fragment$1, safe_not_equal, { keyData: 0 });
+
+    		init(this, options, instance$1, create_fragment$1, safe_not_equal, {
+    			keyData: 0,
+    			id: 1,
+    			name: 2,
+    			rank: 3,
+    			path: 4,
+    			description: 5,
+    			loyalty: 6
+    		});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
-    			tagName: "Key_1",
+    			tagName: "Key",
     			options,
     			id: create_fragment$1.name
     		});
@@ -574,13 +606,60 @@ var app = (function () {
     	set keyData(value) {
     		throw new Error("<Key>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
+
+    	get id() {
+    		throw new Error("<Key>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set id(value) {
+    		throw new Error("<Key>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get name() {
+    		throw new Error("<Key>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set name(value) {
+    		throw new Error("<Key>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get rank() {
+    		throw new Error("<Key>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set rank(value) {
+    		throw new Error("<Key>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get path() {
+    		throw new Error("<Key>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set path(value) {
+    		throw new Error("<Key>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get description() {
+    		throw new Error("<Key>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set description(value) {
+    		throw new Error("<Key>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get loyalty() {
+    		throw new Error("<Key>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set loyalty(value) {
+    		throw new Error("<Key>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
     }
 
     /* src\Index.svelte generated by Svelte v3.46.3 */
     const file = "src\\Index.svelte";
 
     function create_fragment(ctx) {
-    	let link;
     	let t0;
     	let body;
     	let span;
@@ -598,7 +677,7 @@ var app = (function () {
     	let a;
     	let current;
 
-    	key0 = new Key_1({
+    	key0 = new Key({
     			props: {
     				id: "general_ofsho",
     				name: "Ofsho",
@@ -610,7 +689,7 @@ var app = (function () {
     			$$inline: true
     		});
 
-    	key1 = new Key_1({
+    	key1 = new Key({
     			props: {
     				id: "scientist_rstar",
     				name: "RStar",
@@ -622,7 +701,7 @@ var app = (function () {
     			$$inline: true
     		});
 
-    	key2 = new Key_1({
+    	key2 = new Key({
     			props: {
     				id: "king_you",
     				name: "You",
@@ -634,7 +713,7 @@ var app = (function () {
     			$$inline: true
     		});
 
-    	key3 = new Key_1({
+    	key3 = new Key({
     			props: {
     				id: "enforcer_eclipse",
     				name: "Codename Eclipse",
@@ -648,7 +727,6 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			link = element("link");
     			t0 = space();
     			body = element("body");
     			span = element("span");
@@ -667,33 +745,27 @@ var app = (function () {
     			a = element("a");
     			a.textContent = "Contribute on Github!";
     			document.title = "The Rules for Rulers";
-    			attr_dev(link, "rel", "shortcut icon");
-    			attr_dev(link, "type", "image/png");
-    			attr_dev(link, "href", "../images/rulers4rulers_logo_transparent.png");
-    			attr_dev(link, "class", "svelte-3t6x1c");
-    			add_location(link, file, 6, 4, 131);
     			attr_dev(h1, "class", "center svelte-3t6x1c");
-    			add_location(h1, file, 10, 8, 360);
+    			add_location(h1, file, 10, 8, 261);
     			attr_dev(span, "id", "key-container");
     			set_style(span, "border", "2px solid #aaa");
     			set_style(span, "display", "inline-block");
     			set_style(span, "width", "75rem");
     			attr_dev(span, "class", "svelte-3t6x1c");
-    			add_location(span, file, 9, 4, 256);
+    			add_location(span, file, 9, 4, 157);
     			attr_dev(a, "id", "github");
     			attr_dev(a, "href", "https://github.com/EclipseLikesSpace/The-Rules-For-Rulers");
     			attr_dev(a, "class", "svelte-3t6x1c");
-    			add_location(a, file, 46, 8, 1699);
+    			add_location(a, file, 46, 8, 1600);
     			attr_dev(p, "class", "svelte-3t6x1c");
-    			add_location(p, file, 46, 4, 1695);
+    			add_location(p, file, 46, 4, 1596);
     			attr_dev(body, "class", "svelte-3t6x1c");
-    			add_location(body, file, 8, 0, 244);
+    			add_location(body, file, 8, 0, 145);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			append_dev(document.head, link);
     			insert_dev(target, t0, anchor);
     			insert_dev(target, body, anchor);
     			append_dev(body, span);
@@ -728,7 +800,6 @@ var app = (function () {
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			detach_dev(link);
     			if (detaching) detach_dev(t0);
     			if (detaching) detach_dev(body);
     			destroy_component(key0);
@@ -758,7 +829,7 @@ var app = (function () {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Index> was created with unknown prop '${key}'`);
     	});
 
-    	$$self.$capture_state = () => ({ Key: Key_1 });
+    	$$self.$capture_state = () => ({ Key });
     	return [];
     }
 
