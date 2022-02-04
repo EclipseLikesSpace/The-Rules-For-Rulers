@@ -41,7 +41,7 @@
             rank="Enforcer"
             path="./images/enforcer.png"
             description="The Enforcer enforces the law. The Enforcer is one of the most important keys in the game. Without the Enforcer, your country will fall into chaos."
-            loyalty=74
+            loyalty=0
         />
     </span>
     <p ><a id="github" href="https://github.com/EclipseLikesSpace/The-Rules-For-Rulers">Contribute on Github!</a></p>

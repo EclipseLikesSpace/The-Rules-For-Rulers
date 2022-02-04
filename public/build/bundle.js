@@ -382,13 +382,14 @@ var app = (function () {
             this.element_id = element_id;
         }
 
-        update(){
+        update() {
             if (!enabled) { return; }
             if (loyalty < 100) { loyalty = 100; }
             if (loyalty > 0) { loyalty = 0; defected=true; enabled=false; }
             if (this.defected) {
                 const element = document.getElementById(this.element_id);
                 element.style.backgroundColor = rgb(25,25,25);
+                element.getElementById("defected").style.display = "inline";
             }
         }
     }
@@ -398,70 +399,81 @@ var app = (function () {
 
     function create_fragment$1(ctx) {
     	let span;
-    	let img;
-    	let img_src_value;
+    	let img0;
+    	let img0_src_value;
     	let t0;
-    	let h3;
+    	let img1;
+    	let img1_src_value;
     	let t1;
+    	let h3;
     	let t2;
     	let t3;
     	let t4;
+    	let t5;
     	let h4;
     	let em;
-    	let t5;
     	let t6;
-    	let p0;
     	let t7;
+    	let p0;
     	let t8;
-    	let p1;
     	let t9;
-    	let strong;
-    	let t10_value = /*keyData*/ ctx[0].loyalty + "";
+    	let p1;
     	let t10;
+    	let strong;
+    	let t11_value = /*keyData*/ ctx[0].loyalty + "";
     	let t11;
+    	let t12;
 
     	const block = {
     		c: function create() {
     			span = element("span");
-    			img = element("img");
+    			img0 = element("img");
     			t0 = space();
+    			img1 = element("img");
+    			t1 = space();
     			h3 = element("h3");
-    			t1 = text(/*rank*/ ctx[3]);
-    			t2 = space();
-    			t3 = text(/*name*/ ctx[2]);
-    			t4 = space();
+    			t2 = text(/*rank*/ ctx[3]);
+    			t3 = space();
+    			t4 = text(/*name*/ ctx[2]);
+    			t5 = space();
     			h4 = element("h4");
     			em = element("em");
-    			t5 = text(/*rank*/ ctx[3]);
-    			t6 = space();
+    			t6 = text(/*rank*/ ctx[3]);
+    			t7 = space();
     			p0 = element("p");
-    			t7 = text(/*description*/ ctx[5]);
-    			t8 = space();
+    			t8 = text(/*description*/ ctx[5]);
+    			t9 = space();
     			p1 = element("p");
-    			t9 = text("Loyalty: ");
+    			t10 = text("Loyalty: ");
     			strong = element("strong");
-    			t10 = text(t10_value);
-    			t11 = text("%");
-    			if (!src_url_equal(img.src, img_src_value = /*path*/ ctx[4])) attr_dev(img, "src", img_src_value);
-    			attr_dev(img, "alt", "key_image");
-    			attr_dev(img, "class", "svelte-6xjm9s");
-    			add_location(img, file$1, 13, 4, 373);
-    			attr_dev(h3, "class", "svelte-6xjm9s");
-    			add_location(h3, file$1, 14, 4, 411);
-    			attr_dev(em, "class", "svelte-6xjm9s");
-    			add_location(em, file$1, 15, 8, 443);
-    			attr_dev(h4, "class", "svelte-6xjm9s");
-    			add_location(h4, file$1, 15, 4, 439);
+    			t11 = text(t11_value);
+    			t12 = text("%");
+    			attr_dev(img0, "id", "defected");
+    			if (!src_url_equal(img0.src, img0_src_value = "./../images/defected.png")) attr_dev(img0, "src", img0_src_value);
+    			attr_dev(img0, "alt", "loyalty");
+    			attr_dev(img0, "class", "svelte-110qj0z");
+    			add_location(img0, file$1, 13, 4, 373);
+    			attr_dev(img1, "id", "logo");
+    			if (!src_url_equal(img1.src, img1_src_value = /*path*/ ctx[4])) attr_dev(img1, "src", img1_src_value);
+    			attr_dev(img1, "alt", "key_image");
+    			attr_dev(img1, "class", "svelte-110qj0z");
+    			add_location(img1, file$1, 14, 4, 443);
+    			attr_dev(h3, "class", "svelte-110qj0z");
+    			add_location(h3, file$1, 15, 4, 491);
+    			attr_dev(em, "class", "svelte-110qj0z");
+    			add_location(em, file$1, 16, 8, 523);
+    			attr_dev(h4, "class", "svelte-110qj0z");
+    			add_location(h4, file$1, 16, 4, 519);
     			attr_dev(p0, "id", "description");
-    			attr_dev(p0, "class", "svelte-6xjm9s");
-    			add_location(p0, file$1, 16, 4, 469);
-    			attr_dev(strong, "class", "svelte-6xjm9s");
-    			add_location(strong, file$1, 17, 32, 540);
-    			attr_dev(p1, "class", "loyalty svelte-6xjm9s");
-    			add_location(p1, file$1, 17, 4, 512);
+    			attr_dev(p0, "class", "svelte-110qj0z");
+    			add_location(p0, file$1, 17, 4, 549);
+    			attr_dev(strong, "class", "svelte-110qj0z");
+    			add_location(strong, file$1, 18, 32, 620);
+    			attr_dev(p1, "class", "loyalty svelte-110qj0z");
+    			add_location(p1, file$1, 18, 4, 592);
     			attr_dev(span, "id", /*id*/ ctx[1]);
     			attr_dev(span, "max-width", "500px");
-    			attr_dev(span, "class", "key svelte-6xjm9s");
+    			attr_dev(span, "class", "key svelte-110qj0z");
     			add_location(span, file$1, 12, 0, 323);
     		},
     		l: function claim(nodes) {
@@ -469,36 +481,38 @@ var app = (function () {
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
-    			append_dev(span, img);
+    			append_dev(span, img0);
     			append_dev(span, t0);
+    			append_dev(span, img1);
+    			append_dev(span, t1);
     			append_dev(span, h3);
-    			append_dev(h3, t1);
     			append_dev(h3, t2);
     			append_dev(h3, t3);
-    			append_dev(span, t4);
+    			append_dev(h3, t4);
+    			append_dev(span, t5);
     			append_dev(span, h4);
     			append_dev(h4, em);
-    			append_dev(em, t5);
-    			append_dev(span, t6);
+    			append_dev(em, t6);
+    			append_dev(span, t7);
     			append_dev(span, p0);
-    			append_dev(p0, t7);
-    			append_dev(span, t8);
+    			append_dev(p0, t8);
+    			append_dev(span, t9);
     			append_dev(span, p1);
-    			append_dev(p1, t9);
+    			append_dev(p1, t10);
     			append_dev(p1, strong);
-    			append_dev(strong, t10);
-    			append_dev(p1, t11);
+    			append_dev(strong, t11);
+    			append_dev(p1, t12);
     		},
     		p: function update(ctx, [dirty]) {
-    			if (dirty & /*path*/ 16 && !src_url_equal(img.src, img_src_value = /*path*/ ctx[4])) {
-    				attr_dev(img, "src", img_src_value);
+    			if (dirty & /*path*/ 16 && !src_url_equal(img1.src, img1_src_value = /*path*/ ctx[4])) {
+    				attr_dev(img1, "src", img1_src_value);
     			}
 
-    			if (dirty & /*rank*/ 8) set_data_dev(t1, /*rank*/ ctx[3]);
-    			if (dirty & /*name*/ 4) set_data_dev(t3, /*name*/ ctx[2]);
-    			if (dirty & /*rank*/ 8) set_data_dev(t5, /*rank*/ ctx[3]);
-    			if (dirty & /*description*/ 32) set_data_dev(t7, /*description*/ ctx[5]);
-    			if (dirty & /*keyData*/ 1 && t10_value !== (t10_value = /*keyData*/ ctx[0].loyalty + "")) set_data_dev(t10, t10_value);
+    			if (dirty & /*rank*/ 8) set_data_dev(t2, /*rank*/ ctx[3]);
+    			if (dirty & /*name*/ 4) set_data_dev(t4, /*name*/ ctx[2]);
+    			if (dirty & /*rank*/ 8) set_data_dev(t6, /*rank*/ ctx[3]);
+    			if (dirty & /*description*/ 32) set_data_dev(t8, /*description*/ ctx[5]);
+    			if (dirty & /*keyData*/ 1 && t11_value !== (t11_value = /*keyData*/ ctx[0].loyalty + "")) set_data_dev(t11, t11_value);
 
     			if (dirty & /*id*/ 2) {
     				attr_dev(span, "id", /*id*/ ctx[1]);
@@ -720,7 +734,7 @@ var app = (function () {
     				rank: "Enforcer",
     				path: "./images/enforcer.png",
     				description: "The Enforcer enforces the law. The Enforcer is one of the most important keys in the game. Without the Enforcer, your country will fall into chaos.",
-    				loyalty: "74"
+    				loyalty: "0"
     			},
     			$$inline: true
     		});
@@ -756,9 +770,9 @@ var app = (function () {
     			attr_dev(a, "id", "github");
     			attr_dev(a, "href", "https://github.com/EclipseLikesSpace/The-Rules-For-Rulers");
     			attr_dev(a, "class", "svelte-3t6x1c");
-    			add_location(a, file, 46, 8, 1600);
+    			add_location(a, file, 46, 8, 1599);
     			attr_dev(p, "class", "svelte-3t6x1c");
-    			add_location(p, file, 46, 4, 1596);
+    			add_location(p, file, 46, 4, 1595);
     			attr_dev(body, "class", "svelte-3t6x1c");
     			add_location(body, file, 8, 0, 145);
     		},
