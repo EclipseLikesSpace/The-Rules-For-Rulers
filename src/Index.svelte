@@ -18,7 +18,7 @@
             path="./images/general.png"
             description="The general's purpose is to defend and protect the
             country, not enforce the laws. The enforcer does that, not the army."
-            loyalty=100
+            loyalty=78
         />
         <Key
             id="scientist_rstar"
@@ -27,16 +27,15 @@
             path="./images/scientist.png"
             description="The scientist is to research technology and weaponry for
             you, your general and your army."
-            loyalty=100
+            loyalty=92
         />
         <Key
-            id="scientist_rstar"
-            name="RStar"
-            rank="Scientist"
-            path="./images/scientist.png"
-            description="The scientist is to research technology and weaponry for
-            you, your general and your army."
-            loyalty=100
+            id="king_you"
+            name="You"
+            rank="King"
+            path="./images/you.png"
+            description="This is you. That's it. You are the king. You are the leader, got that?"
+            loyalty='Infinity'
         />
         <Key
             id="enforcer_eclipse"
@@ -44,7 +43,7 @@
             rank="Enforcer"
             path="./images/enforcer.png"
             description="The Enforcer enforces the law. The Enforcer is one of the most important keys in the game. Without the Enforcer, your country will fall into chaos."
-            loyalty=100
+            loyalty=74
         />
     </span>
     <p ><a id="github" href="https://github.com/EclipseLikesSpace/The-Rules-For-Rulers">Contribute on Github!</a></p>
