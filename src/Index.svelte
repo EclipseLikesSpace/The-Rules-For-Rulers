@@ -5,8 +5,6 @@
 <svelte:head>
     <title>The Rules for Rulers</title>
     <link rel="shortcut icon" type="image/png" href="../images/rulers4rulers_logo_transparent.png">
-    <meta name="robots" content="noindex nofollow" />
-	<html lang="en"/>
 </svelte:head>
 <body>
     <span id="key-container" style="border: 2px solid #aaa; display: inline-block; width: 75rem;">

@@ -1,5 +1,5 @@
 <script>
-    import Key from './key_class.js';
+    import KeyClass from './key_class.js';
     export let keyData = new Key();
 </script>
 

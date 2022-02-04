@@ -371,14 +371,25 @@ var app = (function () {
         $inject_state() { }
     }
 
-    class Key {
-        constructor(id = null, name = null,rank = null,path = null,description = null,loyalty = null){
-            this.id = id;
-            this.name = name;
-            this.rank = rank;
-            this.path = path;
-            this.description = description;
+    class KeyClass {
+        constructor(loyalty=100,defected=false,enabled=true,element_id){
+            if (loyalty < 100) { loyalty = 100; }
+            if (loyalty > 0) { loyalty = 0; defected=true; }
+            if (typeof(loyalty) !== 'number') { loyalty = null; }
+            if (typeof(defected) !== 'boolean') { defected = null; }
             this.loyalty = loyalty;
+            this.defected = defected;
+            this.element_id = element_id;
+        }
+
+        update(){
+            if (!enabled) { return; }
+            if (loyalty < 100) { loyalty = 100; }
+            if (loyalty > 0) { loyalty = 0; defected=true; enabled=false; }
+            if (this.defected) {
+                const element = document.getElementById(this.element_id);
+                element.style.backgroundColor = rgb(75,75,75);
+            }
         }
     }
 
@@ -439,24 +450,24 @@ var app = (function () {
     			if (!src_url_equal(img.src, img_src_value = /*keyData*/ ctx[0].path)) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "key_image");
     			attr_dev(img, "class", "svelte-6xjm9s");
-    			add_location(img, file$1, 6, 4, 157);
+    			add_location(img, file$1, 6, 4, 162);
     			attr_dev(h3, "class", "svelte-6xjm9s");
-    			add_location(h3, file$1, 7, 4, 203);
+    			add_location(h3, file$1, 7, 4, 208);
     			attr_dev(em, "class", "svelte-6xjm9s");
-    			add_location(em, file$1, 8, 8, 251);
+    			add_location(em, file$1, 8, 8, 256);
     			attr_dev(h4, "class", "svelte-6xjm9s");
-    			add_location(h4, file$1, 8, 4, 247);
+    			add_location(h4, file$1, 8, 4, 252);
     			attr_dev(p0, "id", "description");
     			attr_dev(p0, "class", "svelte-6xjm9s");
-    			add_location(p0, file$1, 9, 4, 285);
+    			add_location(p0, file$1, 9, 4, 290);
     			attr_dev(strong, "class", "svelte-6xjm9s");
-    			add_location(strong, file$1, 10, 32, 364);
+    			add_location(strong, file$1, 10, 32, 369);
     			attr_dev(p1, "class", "loyalty svelte-6xjm9s");
-    			add_location(p1, file$1, 10, 4, 336);
+    			add_location(p1, file$1, 10, 4, 341);
     			attr_dev(span, "id", span_id_value = /*keyData*/ ctx[0].id);
     			attr_dev(span, "max-width", "500px");
     			attr_dev(span, "class", "key svelte-6xjm9s");
-    			add_location(span, file$1, 5, 0, 99);
+    			add_location(span, file$1, 5, 0, 104);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -530,7 +541,7 @@ var app = (function () {
     		if ('keyData' in $$props) $$invalidate(0, keyData = $$props.keyData);
     	};
 
-    	$$self.$capture_state = () => ({ Key, keyData });
+    	$$self.$capture_state = () => ({ KeyClass, keyData });
 
     	$$self.$inject_state = $$props => {
     		if ('keyData' in $$props) $$invalidate(0, keyData = $$props.keyData);
@@ -570,8 +581,6 @@ var app = (function () {
 
     function create_fragment(ctx) {
     	let link;
-    	let meta;
-    	let html;
     	let t0;
     	let body;
     	let span;
@@ -640,8 +649,6 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			link = element("link");
-    			meta = element("meta");
-    			html = element("html");
     			t0 = space();
     			body = element("body");
     			span = element("span");
@@ -665,37 +672,28 @@ var app = (function () {
     			attr_dev(link, "href", "../images/rulers4rulers_logo_transparent.png");
     			attr_dev(link, "class", "svelte-3t6x1c");
     			add_location(link, file, 6, 4, 131);
-    			attr_dev(meta, "name", "robots");
-    			attr_dev(meta, "content", "noindex nofollow");
-    			attr_dev(meta, "class", "svelte-3t6x1c");
-    			add_location(meta, file, 7, 4, 232);
-    			attr_dev(html, "lang", "en");
-    			attr_dev(html, "class", "svelte-3t6x1c");
-    			add_location(html, file, 8, 1, 284);
     			attr_dev(h1, "class", "center svelte-3t6x1c");
-    			add_location(h1, file, 12, 8, 435);
+    			add_location(h1, file, 10, 8, 360);
     			attr_dev(span, "id", "key-container");
     			set_style(span, "border", "2px solid #aaa");
     			set_style(span, "display", "inline-block");
     			set_style(span, "width", "75rem");
     			attr_dev(span, "class", "svelte-3t6x1c");
-    			add_location(span, file, 11, 4, 331);
+    			add_location(span, file, 9, 4, 256);
     			attr_dev(a, "id", "github");
     			attr_dev(a, "href", "https://github.com/EclipseLikesSpace/The-Rules-For-Rulers");
     			attr_dev(a, "class", "svelte-3t6x1c");
-    			add_location(a, file, 48, 8, 1774);
+    			add_location(a, file, 46, 8, 1699);
     			attr_dev(p, "class", "svelte-3t6x1c");
-    			add_location(p, file, 48, 4, 1770);
+    			add_location(p, file, 46, 4, 1695);
     			attr_dev(body, "class", "svelte-3t6x1c");
-    			add_location(body, file, 10, 0, 319);
+    			add_location(body, file, 8, 0, 244);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
     			append_dev(document.head, link);
-    			append_dev(document.head, meta);
-    			append_dev(document.head, html);
     			insert_dev(target, t0, anchor);
     			insert_dev(target, body, anchor);
     			append_dev(body, span);
@@ -731,8 +729,6 @@ var app = (function () {
     		},
     		d: function destroy(detaching) {
     			detach_dev(link);
-    			detach_dev(meta);
-    			detach_dev(html);
     			if (detaching) detach_dev(t0);
     			if (detaching) detach_dev(body);
     			destroy_component(key0);
